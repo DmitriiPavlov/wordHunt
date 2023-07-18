@@ -6,4 +6,6 @@ Raylib is needed for the graphics to work properly.
 Backspace to clear the square, and to enter in letters, the user just has to click on the box and type in the letter. When all spaces are filled out,
 just press RETURN.
 
-![alt text]((https://ibb.co/BfB7xnm)https://ibb.co/BfB7xnm)
+![Image of the game in action](https://github.com/DmitriiPavlov/wordHunt/blob/main/Screenshot%202023-07-17%20at%208.25.09%20PM.png)
+
+This is what it looks like when it's running - the yellow highlighted box is where the user should start tracing out on the game pigeon game.
