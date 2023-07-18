@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F437B7F2A648CA0008CC340 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F437B7E2A648CA0008CC340 /* main.cpp */; };
+		9F437B882A648D42008CC340 /* libraylib.4.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F437B872A648D42008CC340 /* libraylib.4.2.0.dylib */; };
+		9F437B892A648D42008CC340 /* libraylib.4.2.0.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 9F437B872A648D42008CC340 /* libraylib.4.2.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +22,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		9F437B8A2A648D42008CC340 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F437B892A648D42008CC340 /* libraylib.4.2.0.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9F437B7B2A648CA0008CC340 /* wordHunt */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = wordHunt; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F437B7E2A648CA0008CC340 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9F437B852A648CCB008CC340 /* trie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = trie.h; sourceTree = "<group>"; };
+		9F437B872A648D42008CC340 /* libraylib.4.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libraylib.4.2.0.dylib; path = ../../../../../../opt/homebrew/Cellar/raylib/4.2.0/lib/libraylib.4.2.0.dylib; sourceTree = "<group>"; };
+		9F437B8B2A648E7C008CC340 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		9F437B8C2A64919B008CC340 /* solver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solver.h; sourceTree = "<group>"; };
+		9F437B8D2A6491AD008CC340 /* globals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globals.h; sourceTree = "<group>"; };
+		9F437B8E2A64B969008CC340 /* boardVisuals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = boardVisuals.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F437B882A648D42008CC340 /* libraylib.4.2.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +61,10 @@
 		9F437B722A648CA0008CC340 = {
 			isa = PBXGroup;
 			children = (
+				9F437B8E2A64B969008CC340 /* boardVisuals.h */,
 				9F437B7D2A648CA0008CC340 /* wordHunt */,
 				9F437B7C2A648CA0008CC340 /* Products */,
+				9F437B862A648D42008CC340 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +79,21 @@
 		9F437B7D2A648CA0008CC340 /* wordHunt */ = {
 			isa = PBXGroup;
 			children = (
+				9F437B8B2A648E7C008CC340 /* words.txt */,
 				9F437B7E2A648CA0008CC340 /* main.cpp */,
+				9F437B8C2A64919B008CC340 /* solver.h */,
+				9F437B8D2A6491AD008CC340 /* globals.h */,
+				9F437B852A648CCB008CC340 /* trie.h */,
 			);
 			path = wordHunt;
+			sourceTree = "<group>";
+		};
+		9F437B862A648D42008CC340 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F437B872A648D42008CC340 /* libraylib.4.2.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +106,7 @@
 				9F437B772A648CA0008CC340 /* Sources */,
 				9F437B782A648CA0008CC340 /* Frameworks */,
 				9F437B792A648CA0008CC340 /* CopyFiles */,
+				9F437B8A2A648D42008CC340 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -239,6 +274,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/raylib/4.2.0/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/raylib/4.2.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +287,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /opt/homebrew/Cellar/raylib/4.2.0/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/homebrew/Cellar/raylib/4.2.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
