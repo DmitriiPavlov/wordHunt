@@ -8,4 +8,5 @@ just press RETURN.
 
 ![Image of the game in action](https://github.com/DmitriiPavlov/wordHunt/blob/main/Screenshot%202023-07-17%20at%208.25.09%20PM.png)
 
-This is what it looks like when it's running - the yellow highlighted box is where the user should start tracing out on the game pigeon game.
+This is what it looks like when it's running - the yellow highlighted box is where the user should start tracing out in the game pigeon game.
+(Also, yes, shtchis is a valid word - meaning Russian cabbage soup (plural).
